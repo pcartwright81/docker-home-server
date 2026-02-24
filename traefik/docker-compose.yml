@@ -43,7 +43,7 @@ services:
       - traefik.http.routers.traefik.entrypoints=websecure
       - traefik.http.routers.traefik.tls=true
       - traefik.http.routers.traefik.tls.domains[0].main=${SERVER_DOMAIN}
-      - traefik.http.routers.traefik.tls.domains[0].sans="*.${SERVER_DOMAIN}"
+      - traefik.http.routers.traefik.tls.domains[0].sans=*.${SERVER_DOMAIN}
       - traefik.http.routers.traefik.tls.certresolver=myresolver
       - traefik.http.routers.dashboard.rule=Host(`${SUB_DOMAIN}.${SERVER_DOMAIN}`)
       - traefik.http.routers.dashboard.service=api@internal

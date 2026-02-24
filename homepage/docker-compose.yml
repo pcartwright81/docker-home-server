@@ -5,6 +5,7 @@ services:
     environment:
       PUID: ${PUID}
       PGID: ${PGID}
+      HOMEPAGE_ALLOWED_HOSTS: ${SUB_DOMAIN}.${SERVER_DOMAIN}
     ports:
       - 3000:3000
     volumes:
